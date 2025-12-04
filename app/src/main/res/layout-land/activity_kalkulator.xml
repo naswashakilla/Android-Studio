@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Kalkulator">
+
+    <!-- Guideline Horizontal untuk membagi layar (misal: 25% Atas untuk Display, 75% Bawah untuk Tombol) -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <!-- tvExpression akan menempati setengah atas dari area display (di atas tvDisplay) -->
+    <TextView
+        android:id="@+id/tvExpression"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textAlignment="textEnd"
+        android:gravity="bottom|end"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvDisplay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="0"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textAlignment="textEnd"
+        android:gravity="bottom|end"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvExpression"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp" />
+
+    <!-- BAGIAN TOMBOL / KEYPAD (BAWAH) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardKalkulator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- ConstraintLayout untuk grid tombol, menggunakan ConstraintLayout dan constraint chains untuk pembagian ruang yang sama -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <!-- Baris 1: C, Backspace, Bagi, Kali -->
+            <!-- Catatan: Saya menggunakan @android:color/black, @android:color/white, dll. karena warna kustom Anda tidak tersedia dalam konteks ini. Anda bisa menggantinya kembali. -->
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="C"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/red"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btn7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnDelete"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="⌫"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/red"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btn8"
+                app:layout_constraintStart_toEndOf="@id/btnClear"
+                app:layout_constraintEnd_toStartOf="@id/btnBagi"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btnBagi"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="÷"
+                android:textSize="20sp"
+                android:textColor="@color/pink2"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btn9"
+                app:layout_constraintStart_toEndOf="@id/btnDelete"
+                app:layout_constraintEnd_toStartOf="@id/btnKali"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btnKali"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="×"
+                android:textSize="20sp"
+                android:textColor="@color/pink2"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnMinus"
+                app:layout_constraintStart_toEndOf="@id/btnBagi"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="3dp"/>
+
+            <!-- Baris 2: 7, 8, 9, Kurang -->
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="7"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btnClear"
+                app:layout_constraintBottom_toTopOf="@id/btn4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn8"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="8"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btnDelete"
+                app:layout_constraintBottom_toTopOf="@id/btn5"
+                app:layout_constraintStart_toEndOf="@id/btn7"
+                app:layout_constraintEnd_toStartOf="@id/btn9"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="9"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btnBagi"
+                app:layout_constraintBottom_toTopOf="@id/btn6"
+                app:layout_constraintStart_toEndOf="@id/btn8"
+                app:layout_constraintEnd_toStartOf="@id/btnMinus"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="-"
+                android:textColor="@color/pink2"
+                android:textSize="20sp"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btnKali"
+                app:layout_constraintBottom_toTopOf="@id/btnTambah"
+                app:layout_constraintStart_toEndOf="@id/btn9"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:backgroundTint="@color/pinkTone"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/btn7"
+                app:layout_constraintBottom_toTopOf="@id/btn1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn5"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btn8"
+                app:layout_constraintBottom_toTopOf="@id/btn2"
+                app:layout_constraintStart_toEndOf="@id/btn4"
+                app:layout_constraintEnd_toStartOf="@id/btn6"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="6"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btn9"
+                app:layout_constraintBottom_toTopOf="@id/btn3"
+                app:layout_constraintStart_toEndOf="@id/btn5"
+                app:layout_constraintEnd_toStartOf="@id/btnTambah"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btnTambah"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="+"
+                android:textSize="20sp"
+                android:textColor="@color/pink2"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btnMinus"
+                app:layout_constraintBottom_toTopOf="@id/btnSamaDengan"
+                app:layout_constraintStart_toEndOf="@id/btn6"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btn4"
+                app:layout_constraintBottom_toTopOf="@id/btnAtau"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn2"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btn5"
+                app:layout_constraintBottom_toTopOf="@id/btn0"
+                app:layout_constraintStart_toEndOf="@id/btn1"
+                app:layout_constraintEnd_toStartOf="@id/btn3"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btn6"
+                app:layout_constraintBottom_toTopOf="@id/btnTitik"
+                app:layout_constraintStart_toEndOf="@id/btn2"
+                app:layout_constraintEnd_toStartOf="@id/btnTambah"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btnAtau"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="+/-"
+                android:textSize="20sp"
+                android:textColor="@color/brightPink"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btn1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn0"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/pinkTone"
+                app:layout_constraintTop_toBottomOf="@id/btn2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnAtau"
+                app:layout_constraintEnd_toStartOf="@id/btnTitik"
+                android:layout_margin="3dp"/>
+
+            <Button
+                android:id="@+id/btnTitik"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="3dp"
+                android:backgroundTint="@color/pinkTone"
+                android:text="."
+                android:textColor="@color/brightPink"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnSamaDengan"
+                app:layout_constraintStart_toEndOf="@id/btn0"
+                app:layout_constraintTop_toBottomOf="@id/btn3" />
+
+            <Button
+                android:id="@+id/btnSamaDengan"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="="
+                android:textSize="20sp"
+                android:textColor="@color/brightPink"
+                android:backgroundTint="@color/pink2"
+                app:layout_constraintTop_toBottomOf="@id/btnTambah"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnTitik"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="3dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
