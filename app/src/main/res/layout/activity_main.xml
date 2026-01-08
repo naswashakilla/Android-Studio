@@ -119,7 +119,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:fontFamily="sans-serif-condensed-medium"
-                        android:text="Calculator"
+                        android:text="@string/kalkulator"
                         android:textColor="@color/biru"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -201,7 +201,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:fontFamily="sans-serif-condensed-medium"
-                        android:text="Konversi Suhu"
+                        android:text="@string/konversi_suhu"
                         android:textColor="@color/biru"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -249,7 +249,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:fontFamily="sans-serif-condensed-medium"
-                        android:text="Profile"
+                        android:text="@string/profile"
                         android:textColor="@color/biru"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -283,7 +283,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:fontFamily="sans-serif-condensed-medium"
-                        android:text="Exit"
+                        android:text="@string/keluar"
                         android:textColor="@color/biru"
                         android:textStyle="bold" />
 

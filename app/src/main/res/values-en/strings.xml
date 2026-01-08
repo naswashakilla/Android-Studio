@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="profile">Profile</string>
+    <string name="nama">Name :</string>
+    <string name="tanggal_lahir">Date of Birth :</string>
+    <string name="jenis_kelamin">Gender :</string>
+    <string name="status">Status :</string>
+    <string name="hobi">Hobby :</string>
+    <string name="pembayaran">Payment</string>
+    <string name="pengaturan">Settings</string>
+    <string name="notifikasi">Notification</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="namaform">Name</string>
+    <string name="alamat">Address</string>
+    <string name="nomor_hp">Phone Number</string>
+    <string name="agama">Religion</string>
+    <string name="jenis_kelaminform">Gender</string>
+    <string name="perempuan">Woman</string>
+    <string name="laki">Man</string>
+    <string name="hobiform">Hobby</string>
+    <string name="membaca">Reading</string>
+    <string name="menulis">Writing</string>
+    <string name="olahraga">Sports</string>
+    <string name="makan">Eat</string>
+    <string name="simpan">Save</string>
+    <string name="kalkulator">Calculator</string>
+    <string name="keluar">Exit</string>
+    <string name="konversi_suhu">Temperature Conversion</string>
+    <string name="masukkan_nama_pembeli">Enter name</string>
+    <string name="pesan">Order</string>
+    <string name="tunai">Cash</string>
+    <string name="alamatform">Address :</string>
+    <string name="nomor_hpform">Phone Number :</string>
+    <string name="agamaform">Religion :</string>
+    <string name="text_exit">Are you sure you want to exit?</string>
+    <string name="no">No</string>
+    <string name="suhu">Temperature input</string>
+    <string name="hasilkonversi">Coversion result</string>
+    <string name="hasil_hitung_dan_rumus">Calculations adn formulas :</string>
+    <string name="rumus_digunakan">Formula used :</string>
+    <string name="formula_akan_muncul_di_sini">[The formula will appear here]</string>
+    <string name="kembali">Back</string>
+    <string name="hasil_form">Form Results</string>
+</resources>

@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:text="Profile"
+            android:text="@string/profile"
             android:textColor="@color/biru"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -118,7 +118,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="sans-serif-condensed-medium"
-                                android:text="Payment"
+                                android:text="@string/pembayaran"
                                 android:textColor="@color/biru"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -151,7 +151,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="sans-serif-condensed-medium"
-                                android:text="Settings"
+                                android:text="@string/pengaturan"
                                 android:textColor="@color/biru"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -185,7 +185,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="sans-serif-condensed-medium"
-                                android:text="Notification"
+                                android:text="@string/notifikasi"
                                 android:textColor="@color/biru"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -206,7 +206,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Nama :"
+                        android:text="@string/nama"
                         android:textColor="@color/biru"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -242,7 +242,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Tanggal Lahir :"
+                        android:text="@string/tanggal_lahir"
                         android:textColor="@color/biru"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -277,7 +277,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Jenis Kelamin :"
+                        android:text="@string/jenis_kelamin"
                         android:textColor="@color/biru"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -312,7 +312,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Status :"
+                        android:text="@string/status"
                         android:textColor="@color/biru"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -347,7 +347,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Hobi :"
+                        android:text="@string/hobi"
                         android:textColor="@color/biru"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -375,7 +375,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="Edit Profile"
+            android:text="@string/edit_profile"
             android:textColor="@color/biru"
             android:backgroundTint="@color/pinkTone"
             app:layout_constraintTop_toBottomOf="@+id/cardView"/>

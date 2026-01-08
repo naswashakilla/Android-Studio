@@ -29,7 +29,7 @@
             android:id="@+id/etNama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nama"
+            android:hint="@string/namaform"
             android:layout_marginTop="15dp"
             android:inputType="textPersonName"
             android:minHeight="48dp"/>
@@ -38,7 +38,7 @@
             android:id="@+id/etAlamat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Alamat"
+            android:hint="@string/alamat"
             android:layout_marginTop="10dp"
             android:inputType="textPostalAddress"
             android:minHeight="48dp"/>
@@ -47,7 +47,7 @@
             android:id="@+id/etNomor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nomor HP"
+            android:hint="@string/nomor_hp"
             android:layout_marginTop="10dp"
             android:inputType="phone"
             android:minHeight="48dp"/>
@@ -55,7 +55,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Agama"
+            android:text="@string/agama"
             android:textColor="@color/biru"
             android:layout_marginTop="15dp"
             android:textSize="20sp"
@@ -71,7 +71,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jenis Kelamin"
+            android:text="@string/jenis_kelaminform"
             android:textColor="@color/biru"
             android:layout_marginTop="15dp"
             android:textSize="20sp"
@@ -88,20 +88,20 @@
                 android:id="@+id/perempuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Perempuan"/>
+                android:text="@string/perempuan"/>
 
             <RadioButton
                 android:id="@+id/lakilaki"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Laki-laki"/>
+                android:text="@string/laki"/>
 
         </RadioGroup>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hobi"
+            android:text="@string/hobiform"
             android:textColor="@color/biru"
             android:layout_marginTop="15dp"
             android:textSize="20sp"
@@ -111,31 +111,31 @@
             android:id="@+id/membaca"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Membaca"/>
+            android:text="@string/membaca"/>
 
         <CheckBox
             android:id="@+id/menulis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Menulis"/>
+            android:text="@string/menulis"/>
 
         <CheckBox
             android:id="@+id/olahraga"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Olahraga"/>
+            android:text="@string/olahraga"/>
 
         <CheckBox
             android:id="@+id/makan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Makan"/>
+            android:text="@string/makan"/>
 
         <Button
             android:id="@+id/btnSimpan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Simpan"
+            android:text="@string/simpan"
             android:textColor="@color/biru"
             android:backgroundTint="@color/pinkTone"
             android:padding="10dp"
